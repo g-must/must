@@ -5,12 +5,10 @@ import (
 	"testing"
 )
 
-type data struct {
+var testData = struct {
 	v   any
 	err error
-}
-
-var testData = data{
+}{
 	v:   1,
 	err: errors.New(""),
 }
@@ -29,7 +27,7 @@ func TestMust(t *testing.T) {
 			panic: false,
 		},
 		{
-			name: "panic",
+			name: "error",
 			f: func() (any, error) {
 				return nil, testData.err
 			},

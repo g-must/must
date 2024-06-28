@@ -1,7 +1,8 @@
 # must
 
-Wraps a call to a function returning (T, error)
-and panics if the error is non-nil.
+Provides a wrapper for calls to a function returning (T, error)
+
+Similar to [`template.Must`](https://golang.org/pkg/text/template/#Must).
 
 ## Installation
 
@@ -11,16 +12,4 @@ go get github.com/g-must/must
 
 ## Usage
 
-```go
-package main
-
-import (
-	"net/http"
-
-	. "github.com/g-must/must"
-)
-
-func main() {
-	_ = Must(http.Get(""))
-}
-```
+See the [examples](example_test.go).

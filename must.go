@@ -1,3 +1,4 @@
+// Package must provides a wrapper for calls to a function returning (T, error)
 package must
 
 // Must wraps a call to a function returning (T, error)
